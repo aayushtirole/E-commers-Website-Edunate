@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Single Page E-Commerce Demo (INR)</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar (Uses hash links for SPA routing) -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">ShopEase</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><button id="theme-toggle">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container (All views are rendered here by JS) -->
+    <main id="app-container" class="p-section">
+        <!-- Content will be dynamically injected here -->
+        <div class="container text-center"><i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary);"></i> Loading...</div>
+    </main>
+
+    <!-- Custom Modal for alerts/confirmations (Visible across all views) -->
+    <div id="custom-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <!-- The modal-message div now handles both the title and message content dynamically. -->
+            <p class="modal-message" style="margin-bottom: 1.5rem;"></p>
+            <div class="modal-actions">
+                <!-- Action buttons will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer text now looks clean and centralized -->
+            <p>&copy; 2025 ShopEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
